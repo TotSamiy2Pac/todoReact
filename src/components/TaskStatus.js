@@ -1,17 +1,22 @@
 import React, {useState} from 'react';
 
-const TaskStatus = ({task, handleColor, colorOption, save, handleSave, setEv, ev}) => {
-    // console.log(save)
+const TaskStatus = ({task, save, setStatus, status}) => {
+
+
+    const handleTaskStatus = (event) => {
+        setStatus(event.target.value)
+    }
     return (
         <div key={task.id} className="col-2">
             <div className="box">
-                <select key={task.id}
-                        defaultValue={task.selectValue}
+                <select
+                    className={task.status === '2' ? 'gold' : task.status === '3' ? 'green' : 'black'}
+                    key={task.id}
+                        defaultValue={task.status}
                         onChange={event => {
-                            setEv(event.target.value)
-                            handleColor(task, event)
+                            handleTaskStatus(event)
                     }}
-                    style={{borderColor: colorOption}}
+                    style={{borderColor: 'colorOption'}}
                     disabled={save}
                 >
                     <option value='1'>Todo</option>

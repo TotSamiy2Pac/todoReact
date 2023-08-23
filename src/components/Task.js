@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Task = ({task}) => {
+const Task = ({task, save, nameTask, setNameTask}) => {
+    const handleNameTask = (e) => {
+        setNameTask(e.target.value)
+    }
     return (
-        <div className="col-6">
+        <div className="col-5_5">
             <div className="box">
-                <p>{task.task}</p>
+                { save ?
+                    <p>{task.task}</p>
+                    :
+                    <input onChange={event => handleNameTask(event)} type="text" defaultValue={task.task}/>
+                }
             </div>
         </div>
     );

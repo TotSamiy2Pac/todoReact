@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ClearTask = () => {
+const ClearTask = ({handleDelete}) => {
     return (
-        <div className="col-2">
+        <div className="col-1_5">
             <div className="box">
-                <button className={'deleteBtn'}>❌</button>
+                <button onClick={event => handleDelete()} className={'deleteBtn'}>❌</button>
             </div>
         </div>
     );

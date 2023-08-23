@@ -19,6 +19,13 @@ code {
   padding-top: 100px;
 }
 
+.col-1_5 {
+  width: 12.5%;
+}
+.col-5_5 {
+  width: 45.8333333%;
+}
+
 h1 {
   font-weight: 500;
 }
@@ -56,10 +63,26 @@ select {
   appearance: none;
   padding: 5px;
   border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
 }
-/*.red {*/
-/*  border-color: red;*/
-/*}*/
+.gold {
+  border: 2px solid #a6bccb;
+  background-color: gold;
+  color: white;
+}
+.green {
+  border: 2px solid #6aff39;
+  background-color: green;
+  color: white;
+}
+.black {
+  border: 2px solid #633cad;
+  background-color: black;
+  color: white;
+}
+
+
 
 select:focus{
   outline: none;
@@ -68,6 +91,7 @@ select:focus{
 
 .taskContainer {
   padding-top: 20px;
+  gap: 15px;
 }
 
 .editBtn {
